@@ -4,7 +4,19 @@ import { initReactI18next } from 'react-i18next'
 import { en } from './locales/en'
 import { pt } from './locales/pt'
 
-export const LANGUAGE_STORAGE_KEY = 'elvio-portfolio-language'
+export const LANGUAGE_STORAGE_KEY =
+  'elvio-portfolio-language'
+
+export const defaultNS = 'translation' as const
+
+export const resources = {
+  pt: {
+    translation: pt,
+  },
+  en: {
+    translation: en,
+  },
+} as const
 
 function updateDocumentLanguage(language: string): void {
   document.documentElement.lang = language.startsWith('en')
@@ -18,14 +30,9 @@ void i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    resources: {
-      pt: {
-        translation: pt,
-      },
-      en: {
-        translation: en,
-      },
-    },
+    resources,
+    defaultNS,
+    ns: [defaultNS],
 
     fallbackLng: 'pt',
     supportedLngs: ['pt', 'en'],

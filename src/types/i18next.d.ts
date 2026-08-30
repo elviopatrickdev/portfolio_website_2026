@@ -1,12 +1,12 @@
 import 'i18next'
-import type { TranslationResources } from './translations'
+import {
+  defaultNS,
+  resources,
+} from '../i18n/i18n'
 
 declare module 'i18next' {
   interface CustomTypeOptions {
-    defaultNS: 'translation'
-
-    resources: {
-      translation: TranslationResources
-    }
+    defaultNS: typeof defaultNS
+    resources: (typeof resources)['pt']
   }
 }
