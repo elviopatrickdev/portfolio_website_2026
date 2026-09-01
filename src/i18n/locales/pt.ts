@@ -14,6 +14,9 @@ export const pt: TranslationResources = {
   },
 
   navigation: {
+    mainLabel: 'Navegação principal',
+    openMenu: 'Abrir menu de navegação',
+    closeMenu: 'Fechar menu de navegação',
     home: 'Início',
     process: 'Processo',
     expertise: 'Especialização',

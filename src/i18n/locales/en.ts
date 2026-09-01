@@ -14,6 +14,9 @@ export const en: TranslationResources = {
   },
 
   navigation: {
+    mainLabel: 'Main navigation',
+    openMenu: 'Open navigation menu',
+    closeMenu: 'Close navigation menu',
     home: 'Home',
     process: 'Process',
     expertise: 'Expertise',

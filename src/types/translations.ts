@@ -12,12 +12,15 @@ export interface TranslationResources {
   }
 
   navigation: {
+    mainLabel: string
+    openMenu: string
+    closeMenu: string
     home: string
-    about: string
     process: string
     expertise: string
     stack: string
     projects: string
+    about: string
     contact: string
   }
 }
