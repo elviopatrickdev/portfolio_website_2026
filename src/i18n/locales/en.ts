@@ -25,4 +25,15 @@ export const en: TranslationResources = {
     about: 'About',
     contact: 'Contact',
   },
+
+  hero: {
+    experience: '1+ year of hands-on experience',
+    title: 'Frontend',
+    titleHighlight: 'Developer',
+    description:
+      "I'm Elvio Patrick, a <strong>Frontend Developer</strong> focused on React and TypeScript. I turn ideas into fast, responsive and intuitive interfaces, creating modern, functional experiences. With experience in Fullstack Development, I integrate applications with backend solutions.",
+    location: 'Portugal',
+    viewProjects: 'View projects',
+    contact: 'Get in touch',
+  }
 }

@@ -23,4 +23,14 @@ export interface TranslationResources {
     about: string
     contact: string
   }
+
+hero: {
+  experience: string
+  title: string
+  titleHighlight: string
+  description: string
+  location: string
+  viewProjects: string
+  contact: string
+}
 }
