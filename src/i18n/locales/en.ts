@@ -35,5 +35,62 @@ export const en: TranslationResources = {
     location: 'Portugal',
     viewProjects: 'View projects',
     contact: 'Get in touch',
-  }
+  },
+
+  process: {
+    label: 'Development process',
+    title: 'From idea to a product',
+    titleHighlight: 'ready to evolve.',
+    description:
+      'A structured approach that connects goals, experience, code and quality without losing clarity along the way.',
+    stage: 'stage',
+    mapLabel: 'Development process map',
+
+    steps: {
+      understand: {
+        title: 'Understand the problem',
+        description:
+          'I organize goals, users and requirements before turning an idea into screens and functionality.',
+        tags: [
+          'goals',
+          'requirements',
+          'priorities',
+        ],
+      },
+
+      design: {
+        title: 'Design the experience',
+        description:
+          'I structure navigation and interfaces so every action feels clear, fast and consistent on any device.',
+        tags: [
+          'flows',
+          'responsive UI',
+          'accessibility',
+        ],
+      },
+
+      build: {
+        title: 'Build and integrate',
+        description:
+          'I develop reusable components, connect APIs and organize logic on a maintainable foundation.',
+        tags: [
+          'React',
+          'TypeScript',
+          'REST APIs',
+        ],
+      },
+
+      deliver: {
+        title: 'Test and deliver',
+        description:
+          'I validate core flows, refine details and prepare the product for a safe, scalable release.',
+        tags: [
+          'Vitest',
+          'Jest',
+          'RTL',
+          'deployment',
+        ],
+      },
+    },
+  },
 }

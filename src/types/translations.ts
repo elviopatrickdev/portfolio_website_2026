@@ -1,3 +1,9 @@
+export interface ProcessStepTranslation {
+  title: string
+  description: string
+  tags: string[]
+}
+
 export interface TranslationResources {
   theme: {
     enableLight: string
@@ -24,13 +30,29 @@ export interface TranslationResources {
     contact: string
   }
 
-hero: {
-  experience: string
-  title: string
-  titleHighlight: string
-  description: string
-  location: string
-  viewProjects: string
-  contact: string
-}
+  hero: {
+    experience: string
+    title: string
+    titleHighlight: string
+    description: string
+    location: string
+    viewProjects: string
+    contact: string
+  }
+
+  process: {
+    label: string
+    title: string
+    titleHighlight: string
+    description: string
+    stage: string
+    mapLabel: string
+
+    steps: {
+      understand: ProcessStepTranslation
+      design: ProcessStepTranslation
+      build: ProcessStepTranslation
+      deliver: ProcessStepTranslation
+    }
+  }
 }

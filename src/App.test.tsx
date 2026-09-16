@@ -21,7 +21,7 @@ beforeEach(async () => {
 })
 
 describe('App', () => {
-  it('renderiza a Hero dentro do conteúdo principal', () => {
+  it('renderiza a Hero e o Processo no conteúdo principal', () => {
     render(<App />)
 
     const main = screen.getByRole('main')
@@ -32,6 +32,12 @@ describe('App', () => {
         name: 'Frontend Developer',
       }),
     ).toBeInTheDocument()
+
+    expect(
+      within(main).getByRole('region', {
+        name: 'Da ideia ao produto pronto para evoluir.',
+      }),
+    ).toHaveAttribute('id', 'processo')
   })
 
   it('renderiza o cabeçalho com os controlos de tema e idioma', () => {
@@ -54,20 +60,35 @@ describe('App', () => {
     ).toBeInTheDocument()
   })
 
-  it('traduz a Hero através do seletor de idiomas do cabeçalho', async () => {
+  it('traduz a Hero e o Processo através do seletor de idiomas', async () => {
     const user = userEvent.setup()
 
     render(<App />)
 
+    const main = screen.getByRole('main')
     const header = screen.getByRole('banner')
 
-    const hero = screen.getByRole('region', {
+    const hero = within(main).getByRole('region', {
       name: 'Frontend Developer',
     })
+
+    const processSection = within(main).getByRole(
+      'region',
+      {
+        name: 'Da ideia ao produto pronto para evoluir.',
+      },
+    )
 
     expect(
       within(hero).getByRole('link', {
         name: 'Falar comigo',
+      }),
+    ).toBeInTheDocument()
+
+    expect(
+      within(processSection).getByRole('heading', {
+        level: 3,
+        name: 'Entender o problema',
       }),
     ).toBeInTheDocument()
 
@@ -95,10 +116,28 @@ describe('App', () => {
       }),
     ).toHaveAttribute('href', '#projetos')
 
+    const translatedProcessSection =
+      await within(main).findByRole('region', {
+        name: 'From idea to a product ready to evolve.',
+      })
+
     expect(
-      within(hero).queryByRole('link', {
-        name: 'Falar comigo',
-      }),
-    ).not.toBeInTheDocument()
+      within(translatedProcessSection).getByRole(
+        'heading',
+        {
+          level: 3,
+          name: 'Understand the problem',
+        },
+      ),
+    ).toBeInTheDocument()
+
+    expect(
+      within(translatedProcessSection).getByRole(
+        'img',
+        {
+          name: 'Development process map',
+        },
+      ),
+    ).toBeInTheDocument()
   })
 })

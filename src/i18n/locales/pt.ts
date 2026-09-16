@@ -35,5 +35,62 @@ export const pt: TranslationResources = {
     location: 'Portugal',
     viewProjects: 'Ver projetos',
     contact: 'Falar comigo',
-  }
+  },
+
+  process: {
+    label: 'Processo de desenvolvimento',
+    title: 'Da ideia ao produto',
+    titleHighlight: 'pronto para evoluir.',
+    description:
+      'Uma abordagem estruturada para ligar objetivo, experiência, código e qualidade sem perder clareza no caminho.',
+    stage: 'etapa',
+    mapLabel: 'Mapa do processo de desenvolvimento',
+
+    steps: {
+      understand: {
+        title: 'Entender o problema',
+        description:
+          'Organizo objetivos, utilizadores e requisitos antes de transformar a ideia em ecrãs e funcionalidades.',
+        tags: [
+          'objetivos',
+          'requisitos',
+          'prioridades',
+        ],
+      },
+
+      design: {
+        title: 'Desenhar a experiência',
+        description:
+          'Estruturo a navegação e a interface para que cada ação seja clara, rápida e consistente em qualquer dispositivo.',
+        tags: [
+          'fluxos',
+          'UI responsiva',
+          'acessibilidade',
+        ],
+      },
+
+      build: {
+        title: 'Construir e integrar',
+        description:
+          'Desenvolvo componentes reutilizáveis, ligo APIs e organizo a lógica com uma base simples de manter.',
+        tags: [
+          'React',
+          'TypeScript',
+          'REST APIs',
+        ],
+      },
+
+      deliver: {
+        title: 'Testar e entregar',
+        description:
+          'Valido os fluxos principais, corrijo detalhes e preparo o produto para uma publicação segura e evolutiva.',
+        tags: [
+          'Vitest',
+          'Jest',
+          'RTL',
+          'deployment',
+        ],
+      },
+    },
+  },
 }
